@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+
     <nav>
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../projects/">Projects</a></li>
+            <li><a href="../projects/index.html">Projects</a></li>
             <li><a href="index.html">Contact</a></li>
-            <li><a href="../resume/">Resume</a></li>
+            <li><a href="../resume/index.html">Resume</a></li>
             <li><a href="https://github.com" target="_blank">GitHub</a></li>
         </ul>
     </nav>
@@ -19,22 +20,24 @@
     <h1>Contact Me</h1>
 
     <form action="mailto:jsreejesh@ucsd.edu" method="POST" enctype="text/plain">
-        <label>
-            Email:
-            <input type="email" name="email" value="jsreejesh@ucsd.edu" required>
-        </label>
         
         <label>
+            Email:
+            <input type="email" name="email" required>
+        </label>
+
+        <label>
             Subject:
-            <input name="subject" value="Hello!">
+            <input name="subject">
         </label>
 
         <label>
             Message:
-            <textarea name="body">I'd like to chat about...</textarea>
+            <textarea name="body"></textarea>
         </label>
 
         <button>Send Email</button>
     </form>
+
 </body>
 </html>
