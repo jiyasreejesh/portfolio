@@ -74,3 +74,25 @@ button {
   grid-template-rows: subgrid;
   grid-row: span 3;
 }
+
+section {
+  margin-bottom: 2em;
+}
+section h2 {
+  border-bottom: 2px solid oklch(80% 3% 200);
+  padding-bottom: 0.3em;
+}
+article {
+  margin-bottom: 1em;
+}
+ul {
+  padding-left: 1.2em;
+}
+header p {
+  margin: 0.3em 0;
+}
+
+time {
+  color: gray;
+  font-size: 0.9em;
+}
