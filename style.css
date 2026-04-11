@@ -11,3 +11,54 @@ nav ul,
 nav li {
   display: contents;
 }
+nav {
+  display: flex;
+}
+nav a {
+  flex: 1;
+}
+/* STEP 2.3: Style nav links */
+nav a {
+  text-align: center;
+  padding: 0.5em;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Add spacing + divider */
+nav {
+  margin-bottom: 1em;
+  border-bottom: 1px solid oklch(80% 3% 200);
+}
+
+/* STEP 2.4: Accent color + hover */
+:root {
+  --color-accent: oklch(65% 50% 0);
+}
+
+nav a:hover {
+  border-bottom: 0.3em solid var(--color-accent);
+}
+
+/* STEP 3: Form styling */
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+button {
+  grid-column: 1 / -1;
+}
