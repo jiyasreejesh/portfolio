@@ -1,49 +1,64 @@
+/* =========================
+   PAGE LAYOUT
+========================= */
 body {
-  /* Set line height to 1.5 times the font size
-	   and use the OS’s UI font as the website font
-	 */
   font: 100%/1.5 system-ui;
   max-width: 100ch;
   margin-inline: auto;
   padding: 1em;
 }
-nav ul,
-nav li {
-  display: contents;
+
+* {
+  box-sizing: border-box;
 }
-nav {
+
+/* =========================
+   NAV (FIXED)
+========================= */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
 }
-nav a {
+
+nav li {
   flex: 1;
 }
-/* STEP 2.3: Style nav links */
+
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 1.5em;
+}
+
 nav a {
+  display: block;
   text-align: center;
   padding: 0.5em;
   text-decoration: none;
   color: inherit;
 }
 
-/* Add spacing + divider */
-nav {
-  margin-bottom: 1em;
-  border-bottom: 1px solid oklch(80% 3% 200);
-}
-
-/* STEP 2.4: Accent color + hover */
 :root {
   --color-accent: oklch(65% 50% 0);
+}
+
+nav a.current {
+  border-bottom: 0.3em solid #aaa;
 }
 
 nav a:hover {
   border-bottom: 0.3em solid var(--color-accent);
 }
 
-/* STEP 3: Form styling */
+/* =========================
+   FORM
+========================= */
 input,
 textarea,
-button {
+button,
+select {
   font: inherit;
 }
 
@@ -63,6 +78,9 @@ button {
   grid-column: 1 / -1;
 }
 
+/* =========================
+   PROJECT GRID
+========================= */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -75,19 +93,26 @@ button {
   grid-row: span 3;
 }
 
+/* =========================
+   RESUME
+========================= */
 section {
   margin-bottom: 2em;
 }
+
 section h2 {
-  border-bottom: 2px solid oklch(80% 3% 200);
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.3em;
 }
+
 article {
   margin-bottom: 1em;
 }
+
 ul {
   padding-left: 1.2em;
 }
+
 header p {
   margin: 0.3em 0;
 }
@@ -95,4 +120,18 @@ header p {
 time {
   color: gray;
   font-size: 0.9em;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+html {
+  color-scheme: light dark;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
 }
