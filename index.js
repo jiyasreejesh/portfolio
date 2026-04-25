@@ -15,26 +15,26 @@ const githubData = await fetchGitHubData('jiyasreejesh');
 
 const profileStats = document.querySelector('#profile-stats');
 
-if (profileStats) {
+if (profileStats && githubData) {
   profileStats.innerHTML = `
-  <h2>My GitHub Stats</h2>
-  <div class="github-stats">
-    <div class="stat">
-      <p class="label">FOLLOWERS</p>
-      <p class="value">${data.followers}</p>
+    <h2>My GitHub Stats</h2>
+    <div class="github-stats">
+      <div class="stat">
+        <p class="label">FOLLOWERS</p>
+        <p class="value">${githubData.followers}</p>
+      </div>
+      <div class="stat">
+        <p class="label">FOLLOWING</p>
+        <p class="value">${githubData.following}</p>
+      </div>
+      <div class="stat">
+        <p class="label">PUBLIC REPOS</p>
+        <p class="value">${githubData.public_repos}</p>
+      </div>
+      <div class="stat">
+        <p class="label">PUBLIC GISTS</p>
+        <p class="value">${githubData.public_gists}</p>
+      </div>
     </div>
-    <div class="stat">
-      <p class="label">FOLLOWING</p>
-      <p class="value">${data.following}</p>
-    </div>
-    <div class="stat">
-      <p class="label">PUBLIC REPOS</p>
-      <p class="value">${data.public_repos}</p>
-    </div>
-    <div class="stat">
-      <p class="label">PUBLIC GISTS</p>
-      <p class="value">${data.public_gists}</p>
-    </div>
-  </div>
-`;
+  `;
 }
