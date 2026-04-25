@@ -1,14 +1,32 @@
 [
   {
-    "title": "Portfolio Website",
-    "year": "2026",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Built a personal website using HTML, CSS, and JavaScript."
-  },
-  {
-    "title": "Spotify Predictor",
+    "title": "PantryPal",
     "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Predicted song popularity using machine learning."
+    "description": "A recipe recommendation system using pretrained CNNs and structured recipe data. Contributed to preprocessing and model evaluation; awarded 1st place for presentation quality."
+  },
+  {
+    "title": "Waste Classifier",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built a PyTorch CNN to classify waste images into 7 categories using the TACO dataset, achieving ~70% accuracy through preprocessing, augmentation, and tuning."
+  },
+  {
+    "title": "Machine Learning & Modeling",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Developed regression, classification, and ensemble models to predict Spotify popularity using cross-validation and metrics like ROC-AUC, RMSE, and R²."
+  },
+  {
+    "title": "Film & Data Analysis",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Analyzed 50+ years of film data to model predictors of Oscar nominations using EDA, feature engineering, and supervised learning with scikit-learn."
+  },
+  {
+    "title": "Shakespearean Language Model",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built an NLP application using Mistral-7B and Streamlit to generate Shakespearean text and modern-to-Elizabethan translations in real time."
   }
 ]
