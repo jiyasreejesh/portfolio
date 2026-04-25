@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Portfolio Website",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built a personal website using HTML, CSS, and JavaScript."
+  },
+  {
+    "title": "Spotify Predictor",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Predicted song popularity using machine learning."
+  }
+]

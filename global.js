@@ -53,4 +53,51 @@ select.addEventListener("input", (event) => {
   document.documentElement.style.setProperty("color-scheme", value);
 
   localStorage.colorScheme = value;
-});
+}
+// ==========================
+// LAB 4: FETCH JSON
+// ==========================
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch: ${response.statusText}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching JSON:", error);
+  }
+}
+
+// ==========================
+// LAB 4: RENDER PROJECTS
+// ==========================
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!containerElement) {
+    console.error("No container element found");
+    return;
+  }
+
+  containerElement.innerHTML = '';
+
+  for (let project of projects) {
+    const article = document.createElement('article');
+
+    article.innerHTML = `
+      <${headingLevel}>${project.title}</${headingLevel}>
+      <img src="${project.image}" alt="${project.title}">
+      <p>${project.description}</p>
+    `;
+
+    containerElement.appendChild(article);
+  }
+}
+
+// ==========================
+// LAB 4: GITHUB API
+// ==========================
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
