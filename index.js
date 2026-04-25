@@ -1,28 +1,25 @@
 import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 
-// load projects
+// load all projects
 const projects = await fetchJSON('./lib/projects.json');
+
+// take first 3
 const latestProjects = projects.slice(0, 3);
 
-// render projects
+// render them
 const container = document.querySelector('.projects');
 renderProjects(latestProjects, container, 'h2');
 
-// GitHub stats
-const profileStats = document.querySelector('#profile-stats');
-
+// GitHub API
 const githubData = await fetchGitHubData('jiyasreejesh');
 
-profileStats.innerHTML = `
-  <h2>My GitHub Stats</h2>
-  <dl>
-    <dt>Public Repos</dt>
-    <dd>${githubData.public_repos}</dd>
+const profileStats = document.querySelector('#profile-stats');
 
-    <dt>Followers</dt>
-    <dd>${githubData.followers}</dd>
-
-    <dt>Following</dt>
-    <dd>${githubData.following}</dd>
-  </dl>
-`;
+if (profileStats) {
+  profileStats.innerHTML = `
+    <dl>
+      <dt>Repos</dt><dd>${githubData.public_repos}</dd>
+      <dt>Followers</dt><dd>${githubData.followers}</dd>
+      <dt>Following</dt><dd>${githubData.following}</dd>
+    </dl>
+  `;}
