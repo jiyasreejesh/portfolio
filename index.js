@@ -17,10 +17,24 @@ const profileStats = document.querySelector('#profile-stats');
 
 if (profileStats) {
   profileStats.innerHTML = `
-    <dl>
-      <dt>Repos</dt><dd>${githubData.public_repos}</dd>
-      <dt>Followers</dt><dd>${githubData.followers}</dd>
-      <dt>Following</dt><dd>${githubData.following}</dd>
-    </dl>
-  `;
+  <h2>My GitHub Stats</h2>
+  <div class="github-stats">
+    <div class="stat">
+      <p class="label">FOLLOWERS</p>
+      <p class="value">${data.followers}</p>
+    </div>
+    <div class="stat">
+      <p class="label">FOLLOWING</p>
+      <p class="value">${data.following}</p>
+    </div>
+    <div class="stat">
+      <p class="label">PUBLIC REPOS</p>
+      <p class="value">${data.public_repos}</p>
+    </div>
+    <div class="stat">
+      <p class="label">PUBLIC GISTS</p>
+      <p class="value">${data.public_gists}</p>
+    </div>
+  </div>
+`;
 }

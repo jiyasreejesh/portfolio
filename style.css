@@ -135,3 +135,29 @@ html {
   right: 1rem;
   font-size: 80%;
 }
+/* =========================
+   GITHUB STATS
+========================= */
+
+.github-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.stat {
+  text-align: left;
+}
+
+.stat .label {
+  font-size: 0.8rem;
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.stat .value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0.2rem;
+}
