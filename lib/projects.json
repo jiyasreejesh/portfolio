@@ -29,46 +29,5 @@
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Built an NLP application using Mistral-7B and Streamlit to generate Shakespearean text and modern-to-Elizabethan translations in real time."
   }
-  {
-  "title": "Campus Navigation App",
-  "year": "2023",
-  "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-  "description": "Built a web app to help students navigate campus using location data and interactive maps."
-},
-{
-  "title": "Movie Recommendation System",
-  "year": "2023",
-  "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-  "description": "Developed a collaborative filtering system to recommend movies based on user preferences and ratings."
-},
-{
-  "title": "Stock Price Predictor",
-  "year": "2024",
-  "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-  "description": "Used time series models to predict stock price trends and visualize market patterns."
-},
-{
-  "title": "Fitness Tracker Dashboard",
-  "year": "2024",
-  "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-  "description": "Designed a dashboard to analyze workout data and visualize progress over time."
-},
-{
-  "title": "Social Media Sentiment Analysis",
-  "year": "2022",
-  "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-  "description": "Built a natural language processing model to classify sentiment from social media posts."
-},
-{
-  "title": "Weather Data Visualization",
-  "year": "2022",
-  "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-  "description": "Created interactive visualizations to explore historical weather trends and seasonal patterns."
-},
-{
-  "title": "Online Quiz Platform",
-  "year": "2021",
-  "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-  "description": "Developed a web-based quiz system with real-time scoring and user feedback."
-}
+  
 ]
