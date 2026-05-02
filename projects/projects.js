@@ -90,7 +90,7 @@ function updateProjects() {
 
   const visibleProjects = getVisibleProjects(searchFilteredProjects);
 
-  renderProjects(visibleProjects, projectsContainer, 'h2');
+  renderProjects(visibleProjects, container, 'h2');
   renderPieChart(searchFilteredProjects);
 
   if (title) {
