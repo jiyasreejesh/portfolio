@@ -28,6 +28,47 @@
     "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Built an NLP application using Mistral-7B and Streamlit to generate Shakespearean text and modern-to-Elizabethan translations in real time."
+  },
+  {
+    "title": "Portfolio Website",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built a personal website using HTML, CSS, and JavaScript with responsive design and dynamic content rendering."
+  },
+  {
+    "title": "GitHub API Dashboard",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Used JavaScript fetch to load GitHub profile stats and display repos, followers, and activity dynamically."
+  },
+  {
+    "title": "Campus Navigation App",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built a web app to help students navigate campus using maps and location data."
+  },
+  {
+    "title": "Movie Recommendation System",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Developed a recommendation system using collaborative filtering and user rating patterns."
+  },
+  {
+    "title": "Stock Price Predictor",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Used time series models to analyze and predict stock price trends."
+  },
+  {
+    "title": "Social Media Sentiment Analysis",
+    "year": "2022",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built an NLP model to classify sentiment from social media text data."
+  },
+  {
+    "title": "Online Quiz Platform",
+    "year": "2021",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Developed a web-based quiz system with scoring, feedback, and user interaction."
   }
-  
 ]
