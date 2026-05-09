@@ -21,6 +21,7 @@ function processCommits(data) {
     .map(([commit, lines]) => {
       const first = lines[0];
       const { author, date, time, timezone, datetime } = first;
+
       const ret = {
         id: commit,
         url: `https://github.com/jiyasreejesh/portfolio/commit/${commit}`,
@@ -55,13 +56,16 @@ function renderCommitInfo(data, commitData) {
     (v) => d3.max(v, (d) => d.line),
     (d) => d.file,
   );
+
   const longestFile = d3.greatest(fileLengths, (d) => d[1]);
   const largestCommit = d3.greatest(commitData, (d) => d.totalLines);
+
   const workByPeriod = d3.rollups(
     data,
     (v) => v.length,
     (d) => d.datetime.toLocaleString('en', { dayPeriod: 'short' }),
   );
+
   const maxPeriod = d3.greatest(workByPeriod, (d) => d[1])?.[0] ?? 'n/a';
 
   const summary = [
@@ -130,7 +134,6 @@ function renderSelectionCount(selection) {
   const selectedCommits = getSelectedCommits(selection);
   const countElement = document.querySelector('#selection-count');
   countElement.textContent = `${selectedCommits.length || 'No'} commits selected`;
-  return selectedCommits;
 }
 
 function renderLanguageBreakdown(selection) {
@@ -144,6 +147,7 @@ function renderLanguageBreakdown(selection) {
   }
 
   const lines = selectedCommits.flatMap((d) => d.lines);
+
   const breakdown = d3.rollup(
     lines,
     (v) => v.length,
@@ -153,6 +157,7 @@ function renderLanguageBreakdown(selection) {
   for (const [language, count] of breakdown) {
     const proportion = count / lines.length;
     const formatted = d3.format('.1~%')(proportion);
+
     container.innerHTML += `
       <dt>${language}</dt>
       <dd>${count} lines (${formatted})</dd>
@@ -162,9 +167,11 @@ function renderLanguageBreakdown(selection) {
 
 function brushed(event) {
   const selection = event.selection;
+
   d3.selectAll('#chart circle').classed('selected', (d) =>
     isCommitSelected(selection, d),
   );
+
   renderSelectionCount(selection);
   renderLanguageBreakdown(selection);
 }
@@ -187,6 +194,7 @@ function renderScatterPlot(commitData) {
   const width = 1000;
   const height = 600;
   const margin = { top: 20, right: 20, bottom: 40, left: 50 };
+
   const usableArea = {
     top: margin.top,
     right: width - margin.right,
@@ -216,6 +224,7 @@ function renderScatterPlot(commitData) {
     .range([usableArea.bottom, usableArea.top]);
 
   const [minLines, maxLines] = d3.extent(commitData, (d) => d.totalLines);
+
   const rScale = d3
     .scaleSqrt()
     .domain([minLines, maxLines])
