@@ -1,5 +1,12 @@
 [
   {
+  "title": "Bikewatching",
+  "year": "2026",
+  "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+  "description": "Built an interactive Mapbox and D3 visualization of Boston BlueBike traffic by station, time of day, and traffic direction.",
+  "url": "https://jiyasreejesh.github.io/bikewatching/"
+},
+  {
     "title": "PantryPal",
     "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
