@@ -2,7 +2,7 @@
   {
   "title": "Bikewatching",
   "year": "2026",
-  "image": "/images/bikewatching.png",
+  "image": "/portfolio/images/bikewatching.png",
   "description": "Built an interactive Mapbox and D3 visualization of Boston BlueBike traffic by station, time of day, and traffic direction.",
   "url": "https://jiyasreejesh.github.io/bikewatching/"
 },
